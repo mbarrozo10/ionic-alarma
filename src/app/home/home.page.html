@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-button (click)="logout()">
+      <ion-icon name="arrow-back-outline"></ion-icon>    </ion-button>
+  </ion-buttons>
+    <ion-title>Bienvenido {{usuario}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="ion-padding"> 
+    <ion-button [color]="color" (click)="activar()">
+      {{Activar}}
+    </ion-button>
+  </div>
+</ion-content>
+
+

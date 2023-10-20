@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-card class="ion-cards">
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="12" size-lg="12" size-xs="12">
+          <div class="text-center d-flex align-items-center justify-content-center">
+            <h3>Ingresar</h3>
+              <img src="../../assets/logo.png" alt="" class="img-fluid custom-img-size">
+          </div>
+        </ion-col>
+          <ion-col class="botones" align-self-center size-md="12" size-lg="12" size-xs="12"> 
+              <ion-input aria-label="Primary input" color="secondary" label="Correo" labelPlacement="floating" fill="outline"  name="email" type="email" placeholder="your@email.com" [(ngModel)]="usuario" name="usuario"></ion-input>
+              <ion-input aria-label="Primary input" color="primary" label="Contraseña" labelPlacement="floating" fill="outline" name="password" type="password" placeholder="Password" [(ngModel)]="pass" name="pass"></ion-input>
+              <ion-button   type="submit" (click)="login()" expand="block">Ingresar</ion-button>
+              <ion-button  type="submit" (click)="salir()" expand="block">Salir</ion-button>            
+          </ion-col>
+      </ion-row>
+      <div class="radio">
+      <ion-radio-group value="">
+        <ion-radio value="grapes"color="tertiary" (click)="Autocompletar('admin@admin.com','111111')">admin</ion-radio><br />
+        <ion-radio value="strawberries" color="tertiary"(click)="Autocompletar('usuario@usuario.com','333333')">usuario</ion-radio><br />
+        <ion-radio value="pineapple"color="tertiary" (click)="Autocompletar('invitado@invitado.com','222222')">invitado</ion-radio><br />
+        <ion-radio value="cherries"color="tertiary" (click)="Autocompletar('tester@tester.com','555555')">tester</ion-radio><br />
+        <ion-radio value="anonimo"color="tertiary" (click)="Autocompletar('anonimo@anonimo.com','444444')">anonimo</ion-radio>
+      </ion-radio-group>
+    </div>
+      </ion-card>
+  </ion-grid>
+</ion-content>
+
